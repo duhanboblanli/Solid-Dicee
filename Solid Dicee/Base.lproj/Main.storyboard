@@ -16,48 +16,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background new" translatesAutoresizingMaskIntoConstraints="NO" id="vYC-08-4cU">
-                                <rect key="frame" x="0.0" y="-142" width="390" height="1165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="vYC-08-4cU">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="1Pg-5g-cfm">
-                                <rect key="frame" x="40" y="400" width="120" height="120"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="g2u-fr-9ef" userLabel="Dice Image Stack">
+                                <rect key="frame" x="64" y="372" width="263" height="100"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="1Pg-5g-cfm">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceSix" translatesAutoresizingMaskIntoConstraints="NO" id="ejh-at-EXy">
+                                        <rect key="frame" x="163" y="0.0" width="100" height="100"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let the Lucifer roll the dice?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1k-yf-jfo">
+                                <rect key="frame" x="28" y="558" width="334.66666666666669" height="35.666666666666664"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DiceSix" translatesAutoresizingMaskIntoConstraints="NO" id="ejh-at-EXy">
-                                <rect key="frame" x="230" y="400" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ul2-NF-IWB">
-                                <rect key="frame" x="67" y="625" width="257" height="165"/>
+                                <rect key="frame" x="82" y="602" width="227" height="204"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Roll" cornerStyle="dynamic">
-                                    <backgroundConfiguration key="background" image="lucifer" imageContentMode="center" strokeWidth="0.0" strokeOutset="0.0">
+                                    <backgroundConfiguration key="background" image="lucifer" imageContentMode="scaleToFill" strokeWidth="0.0" strokeOutset="0.0">
                                         <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
-                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="-81" trailing="0.0"/>
+                                    <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="28"/>
+                                    <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="-51" trailing="0.0"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nGl-yo-YUK"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="LmF-a5-uyW">
-                                <rect key="frame" x="-109" y="-31" width="608" height="513"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="3Ov-wQ-fTZ">
+                                <rect key="frame" x="25" y="22" width="341.33333333333326" height="341.33333333333326"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let the Lucifer roll the dice?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1k-yf-jfo">
-                                <rect key="frame" x="11" y="565" width="369" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vYC-08-4cU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3Ss-U4-zXm"/>
+                            <constraint firstItem="vYC-08-4cU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JSr-ax-dqu"/>
+                            <constraint firstAttribute="bottom" secondItem="vYC-08-4cU" secondAttribute="bottom" id="TMC-Qi-eK0"/>
+                            <constraint firstAttribute="trailing" secondItem="vYC-08-4cU" secondAttribute="trailing" id="wjA-Rd-bW8"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="diceImageView1" destination="1Pg-5g-cfm" id="Ujg-ve-blp"/>
@@ -66,13 +74,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4.615384615384615" y="-2.1327014218009479"/>
+            <point key="canvasLocation" x="3.0769230769230766" y="-3.5545023696682461"/>
         </scene>
     </scenes>
     <resources>
         <image name="DiceOne" width="100" height="100"/>
         <image name="DiceSix" width="100" height="100"/>
-        <image name="background new" width="341.33334350585938" height="341.33334350585938"/>
+        <image name="GreenBackground" width="444.66665649414062" height="414.33334350585938"/>
         <image name="logo" width="341.33334350585938" height="341.33334350585938"/>
         <image name="lucifer" width="341.33334350585938" height="341.33334350585938"/>
         <systemColor name="systemBackgroundColor">
